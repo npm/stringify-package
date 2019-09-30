@@ -1,6 +1,6 @@
 {
   "name": "stringify-package",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "stringifies npm-written json files",
   "main": "index.js",
   "files": [

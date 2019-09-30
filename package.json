@@ -25,17 +25,14 @@
   "scripts": {
     "prerelease": "npm t",
     "release": "standard-version -s",
-    "postrelease": "npm publish && git push --follow-tags",
+    "postrelease": "npm publish",
+    "postpublish": "git push --follow-tags",
     "pretest": "standard",
-    "test": "tap -J --coverage --100 test/*.js",
-    "update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
-    "update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
+    "test": "tap -J --coverage --100 test/*.js"
   },
   "devDependencies": {
-    "weallbehave": "*",
-    "weallcontribute": "*",
-    "standard": "*",
-    "standard-version": "*",
-    "tap": "*"
+    "standard": "11",
+    "standard-version": "4",
+    "tap": "12"
   }
 }

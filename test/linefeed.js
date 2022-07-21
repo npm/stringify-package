@@ -1,6 +1,6 @@
 'use strict'
 
-const stringifyPackage = require('../index')
+const stringifyPackage = require('../lib/index')
 const test = require('tap').test
 
 const dummy = { name: 'dummy' }

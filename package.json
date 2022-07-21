@@ -2,13 +2,14 @@
   "name": "stringify-package",
   "version": "1.0.1",
   "description": "stringifies npm-written json files",
-  "main": "index.js",
+  "main": "lib/index.js",
   "files": [
-    "index.js"
+    "bin/",
+    "lib/"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/npm/stringify-package.git"
+    "url": "https://github.com/npm/stringify-package.git"
   },
   "keywords": [
     "npm",
@@ -16,23 +17,34 @@
     "stringify",
     "package.json"
   ],
-  "author": "Kat Marchán <kzm@zkat.tech>",
+  "author": "GitHub Inc.",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/npm/stringify-package/issues"
   },
   "homepage": "https://github.com/npm/stringify-package",
   "scripts": {
-    "prerelease": "npm t",
-    "release": "standard-version -s",
-    "postrelease": "npm publish",
-    "postpublish": "git push --follow-tags",
-    "pretest": "standard",
-    "test": "tap -J --coverage --100 test/*.js"
+    "template-oss-apply": "template-oss-apply --force",
+    "lint": "eslint \"**/*.js\"",
+    "postlint": "template-oss-check",
+    "lintfix": "npm run lint -- --fix",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "prepublishOnly": "git push origin --follow-tags",
+    "snap": "tap",
+    "test": "tap",
+    "posttest": "npm run lint"
   },
   "devDependencies": {
-    "standard": "11",
-    "standard-version": "4",
-    "tap": "12"
+    "@npmcli/eslint-config": "^3.1.0",
+    "@npmcli/template-oss": "3.5.0",
+    "tap": "^16.3.0"
+  },
+  "engines": {
+    "node": "^12.13.0 || ^14.15.0 || >=16.0.0"
+  },
+  "templateOSS": {
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+    "version": "3.5.0"
   }
 }

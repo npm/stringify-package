@@ -1,4 +1,4 @@
-# stringify-package [![npm version](https://img.shields.io/npm/v/stringify-package.svg)](https://npm.im/stringify-package) [![license](https://img.shields.io/npm/l/stringify-package.svg)](https://npm.im/stringify-package) [![Travis](https://img.shields.io/travis/npm/stringify-package/latest.svg)](https://travis-ci.org/npm/stringify-package) [![AppVeyor](https://img.shields.io/appveyor/ci/npm/stringify-package/latest.svg)](https://ci.appveyor.com/project/npm/stringify-package) [![Coverage Status](https://coveralls.io/repos/github/npm/stringify-package/badge.svg?branch=latest)](https://coveralls.io/github/npm/stringify-package?branch=latest)
+# stringify-package [![npm version](https://img.shields.io/npm/v/stringify-package.svg)](https://npm.im/stringify-package) [![license](https://img.shields.io/npm/l/stringify-package.svg)](https://npm.im/stringify-package) [![Travis](https://img.shields.io/travis/npm/stringify-package/latest.svg)](https://travis-ci.org/npm/stringify-package)
 
 [`stringify-package`](https://github.com/npm/stringify-package) is a standalone
 library for writing out package data as a JSON file. It is extracted from npm.
